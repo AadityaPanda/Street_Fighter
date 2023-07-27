@@ -1,4 +1,4 @@
-# Project Title: Street Fighter Clone Made in Python
+# Street Fighter 
 
 ## 1. Project Description:
 
