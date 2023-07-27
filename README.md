@@ -5,6 +5,10 @@
 
 This project is a Clone of the Street Fighter Game. It has been developed in Python programming language, using the Pygame library.
 
+This game is based on old arcade fighting games where two players go up against each other. There are independent controls for each player, both with their own attacks. There are two attacks that each player can execute, with different attack animations. This base game can be expanded to add more characters and attack types.
+
+Player one controls are; A and D to move, W to jump, Q and E to attack. Player two moves and jumps with the arrow keys and attacks are with N and M. These controls are customizable in the source code.
+
 
 ## 2. Tech Stack:
 
