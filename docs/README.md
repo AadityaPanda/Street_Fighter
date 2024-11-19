@@ -86,18 +86,15 @@ Follow these steps to install and run the game:
 
 
 ## Screenshots
-![Screenshot (2)](https://github.com/user-attachments/assets/82b289ab-5da7-4331-a1b4-dd264ee77707)
-![Screenshot (3)](https://github.com/user-attachments/assets/c72256a3-c637-4b2f-8605-57a7c39093de)
-![Screenshot (4)](https://github.com/user-attachments/assets/1e747407-7887-4bc3-87c1-751b6d27eb5c)
-
+![Screenshot (2)](https://github.com/user-attachments/assets/7562ab48-b357-46c6-8629-6a9af19f321e)
+![Screenshot (3)](https://github.com/user-attachments/assets/36889906-8cec-4320-a4d0-b56390ce6da2)
+![Screenshot (4)](https://github.com/user-attachments/assets/84f33ec5-b251-471f-a094-b5ab94533ab5)
 
 
 ## Demo
 
 
-https://github.com/user-attachments/assets/fe990e99-b59e-4ef3-9d2a-80ba7a7e7601
-
-
+https://github.com/user-attachments/assets/2d1ca950-ebee-4440-87f0-c0eeae48d9c0
 
 
 
