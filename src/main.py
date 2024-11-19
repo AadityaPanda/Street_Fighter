@@ -3,6 +3,7 @@ from pygame import mixer
 import cv2
 import numpy as np
 from fighter import Fighter
+import math
 
 mixer.init()
 pygame.init()
@@ -19,10 +20,12 @@ RED = (255, 0, 0)
 YELLOW = (255, 255, 0)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
+BLUE = (0, 0, 255)
+GREEN = (0, 255, 0)
 
 # Initialize Game Window
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), pygame.NOFRAME)
-pygame.display.set_caption("Shadow Fight")
+pygame.display.set_caption("Street Fighter")
 clock = pygame.time.Clock()
 
 # Load Assets
@@ -32,6 +35,7 @@ warrior_victory_img = pygame.image.load("assets/images/warrior.png").convert_alp
 wizard_victory_img = pygame.image.load("assets/images/wizard.png").convert_alpha()
 
 # Fonts
+menu_font_title = pygame.font.Font("assets/fonts/turok.ttf", 100)
 menu_font = pygame.font.Font("assets/fonts/turok.ttf", 50)
 count_font = pygame.font.Font("assets/fonts/turok.ttf", 80)
 score_font = pygame.font.Font("assets/fonts/turok.ttf", 30)
@@ -85,7 +89,6 @@ def draw_bg(image, is_game_started=False):
         blurred_bg = pygame.transform.scale(blurred_bg, (SCREEN_WIDTH, SCREEN_HEIGHT))
         screen.blit(blurred_bg, (0, 0))
     else:
-        # Draw the unblurred background when the game starts
         image = pygame.surfarray.make_surface(np.transpose(image, (1, 0, 2)))
         image = pygame.transform.scale(image, (SCREEN_WIDTH, SCREEN_HEIGHT))
         screen.blit(image, (0, 0))
@@ -103,9 +106,14 @@ def draw_button(text, font, text_col, button_col, x, y, width, height):
 def victory_screen(winner_img):
     start_time = pygame.time.get_ticks()
     while pygame.time.get_ticks() - start_time < ROUND_OVER_COOLDOWN:
-        draw_bg(bg_image)
+
+        resized_victory_img = pygame.transform.scale(victory_img, (victory_img.get_width() * 2, victory_img.get_height() * 2))
+        screen.blit(resized_victory_img, (SCREEN_WIDTH // 2 - resized_victory_img.get_width() // 2,
+                                          SCREEN_HEIGHT // 2 - resized_victory_img.get_height() // 2 - 50))
+
         screen.blit(winner_img, (SCREEN_WIDTH // 2 - winner_img.get_width() // 2,
-                                 SCREEN_HEIGHT // 2 - winner_img.get_height() // 2))
+                                 SCREEN_HEIGHT // 2 - winner_img.get_height() // 2 + 100))
+
         pygame.display.update()
 
         for event in pygame.event.get():
@@ -114,26 +122,49 @@ def victory_screen(winner_img):
                 exit()
 
 
+def draw_gradient_text(text, font, x, y, colors):
+    """
+    Draws a gradient text by layering multiple text surfaces with slight offsets.
+    """
+    offset = 2
+    for i, color in enumerate(colors):
+        img = font.render(text, True, color)
+        screen.blit(img, (x + i * offset, y + i * offset))
+
+
 def main_menu():
+    animation_start_time = pygame.time.get_ticks()
+
     while True:
         draw_bg(bg_image, is_game_started=False)
 
-        title_text = "SHADOW FIGHT"
-        draw_text(title_text, menu_font, RED, SCREEN_WIDTH // 2 - menu_font.size(title_text)[0] // 2, 50)
+        elapsed_time = (pygame.time.get_ticks() - animation_start_time) / 1000
+        scale_factor = 1 + 0.05 * math.sin(elapsed_time * 2 * math.pi)  # Slight scaling
+        scaled_font = pygame.font.Font("assets/fonts/turok.ttf", int(100 * scale_factor))
 
-        button_width = 300
-        button_height = 70
-        button_spacing = 20
+        title_text = "STREET FIGHTER"
+        colors = [BLUE, GREEN, YELLOW]
+        shadow_color = BLACK
+        title_x = SCREEN_WIDTH // 2 - scaled_font.size(title_text)[0] // 2
+        title_y = SCREEN_HEIGHT // 6
 
-        start_button_y = SCREEN_HEIGHT // 2 - (button_height + button_spacing) * 1.5
-        scores_button_y = SCREEN_HEIGHT // 2 - (button_height + button_spacing) * 0.5
-        exit_button_y = SCREEN_HEIGHT // 2 + (button_height + button_spacing) * 0.5
+        shadow_offset = 5
+        draw_text(title_text, scaled_font, shadow_color, title_x + shadow_offset, title_y + shadow_offset)
+        draw_gradient_text(title_text, scaled_font, title_x, title_y, colors)
 
-        start_button = draw_button("START GAME", menu_font, BLACK, YELLOW, SCREEN_WIDTH // 2 - button_width // 2,
+        button_width = 280
+        button_height = 60
+        button_spacing = 30
+
+        start_button_y = SCREEN_HEIGHT // 2 - (button_height + button_spacing) * 1.5 + 50
+        scores_button_y = SCREEN_HEIGHT // 2 - (button_height + button_spacing) * 0.5 + 50
+        exit_button_y = SCREEN_HEIGHT // 2 + (button_height + button_spacing) * 0.5 + 50
+
+        start_button = draw_button("START GAME", menu_font, BLACK, GREEN, SCREEN_WIDTH // 2 - button_width // 2,
                                    start_button_y, button_width, button_height)
-        scores_button = draw_button("SCORES", menu_font, BLACK, YELLOW, SCREEN_WIDTH // 2 - button_width // 2,
+        scores_button = draw_button("SCORES", menu_font, BLACK, GREEN, SCREEN_WIDTH // 2 - button_width // 2,
                                     scores_button_y, button_width, button_height)
-        exit_button = draw_button("EXIT", menu_font, BLACK, YELLOW, SCREEN_WIDTH // 2 - button_width // 2,
+        exit_button = draw_button("EXIT", menu_font, BLACK, GREEN, SCREEN_WIDTH // 2 - button_width // 2,
                                   exit_button_y, button_width, button_height)
 
         for event in pygame.event.get():
@@ -158,14 +189,24 @@ def scores_screen():
         draw_bg(bg_image)
 
         scores_title = "SCORES"
-        draw_text(scores_title, menu_font, RED, SCREEN_WIDTH // 2 - menu_font.size(scores_title)[0] // 2, 50)
+        draw_text(scores_title, menu_font_title, RED, SCREEN_WIDTH // 2 - menu_font_title.size(scores_title)[0] // 2, 50)
 
+        score_font_large = pygame.font.Font("assets/fonts/turok.ttf", 60)  # Increased size for scores
         p1_text = f"P1: {score[0]}"
         p2_text = f"P2: {score[1]}"
-        draw_text(p1_text, score_font, YELLOW, SCREEN_WIDTH // 2 - score_font.size(p1_text)[0] // 2, 250)
-        draw_text(p2_text, score_font, YELLOW, SCREEN_WIDTH // 2 - score_font.size(p2_text)[0] // 2, 400)
+        shadow_offset = 5
 
-        return_button = draw_button("RETURN TO MAIN MENU", menu_font, BLACK, YELLOW, SCREEN_WIDTH // 2 - 220, 700, 500, 50)
+        p1_text_x = SCREEN_WIDTH // 2 - score_font_large.size(p1_text)[0] // 2
+        p1_text_y = SCREEN_HEIGHT // 2 - 50
+        draw_text(p1_text, score_font_large, BLACK, p1_text_x + shadow_offset, p1_text_y + shadow_offset)  # Shadow
+        draw_gradient_text(p1_text, score_font_large, p1_text_x, p1_text_y, [BLUE, GREEN])  # Gradient
+
+        p2_text_x = SCREEN_WIDTH // 2 - score_font_large.size(p2_text)[0] // 2
+        p2_text_y = SCREEN_HEIGHT // 2 + 50
+        draw_text(p2_text, score_font_large, BLACK, p2_text_x + shadow_offset, p2_text_y + shadow_offset)  # Shadow
+        draw_gradient_text(p2_text, score_font_large, p2_text_x, p2_text_y, [RED, YELLOW])  # Gradient
+
+        return_button = draw_button("RETURN TO MAIN MENU", menu_font, BLACK, GREEN, SCREEN_WIDTH // 2 - 220, 700, 500, 50)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
