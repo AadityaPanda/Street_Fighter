@@ -1,9 +1,21 @@
+import math
 import pygame
 from pygame import mixer
+from pygame import font
 import cv2
 import numpy as np
+import os
+import sys
 from fighter import Fighter
-import math
+
+# Helper Function for Bundled Assets
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
 
 mixer.init()
 pygame.init()
@@ -29,29 +41,29 @@ pygame.display.set_caption("Street Fighter")
 clock = pygame.time.Clock()
 
 # Load Assets
-bg_image = cv2.imread("assets/images/bg1.jpg")
-victory_img = pygame.image.load("assets/images/victory.png").convert_alpha()
-warrior_victory_img = pygame.image.load("assets/images/warrior.png").convert_alpha()
-wizard_victory_img = pygame.image.load("assets/images/wizard.png").convert_alpha()
+bg_image = cv2.imread(resource_path("assets/images/bg1.jpg"))
+victory_img = pygame.image.load(resource_path("assets/images/victory.png")).convert_alpha()
+warrior_victory_img = pygame.image.load(resource_path("assets/images/warrior.png")).convert_alpha()
+wizard_victory_img = pygame.image.load(resource_path("assets/images/wizard.png")).convert_alpha()
 
 # Fonts
-menu_font_title = pygame.font.Font("assets/fonts/turok.ttf", 100)
-menu_font = pygame.font.Font("assets/fonts/turok.ttf", 50)
-count_font = pygame.font.Font("assets/fonts/turok.ttf", 80)
-score_font = pygame.font.Font("assets/fonts/turok.ttf", 30)
+menu_font = pygame.font.Font(resource_path("assets/fonts/turok.ttf"), 50)
+menu_font_title = pygame.font.Font(resource_path("assets/fonts/turok.ttf"), 100)  # Larger font for title
+count_font = pygame.font.Font(resource_path("assets/fonts/turok.ttf"), 80)
+score_font = pygame.font.Font(resource_path("assets/fonts/turok.ttf"), 30)
 
 # Music and Sounds
-pygame.mixer.music.load("assets/audio/music.mp3")
+pygame.mixer.music.load(resource_path("assets/audio/music.mp3"))
 pygame.mixer.music.set_volume(0.5)
 pygame.mixer.music.play(-1, 0.0, 5000)
-sword_fx = pygame.mixer.Sound("assets/audio/sword.wav")
+sword_fx = pygame.mixer.Sound(resource_path("assets/audio/sword.wav"))
 sword_fx.set_volume(0.5)
-magic_fx = pygame.mixer.Sound("assets/audio/magic.wav")
+magic_fx = pygame.mixer.Sound(resource_path("assets/audio/magic.wav"))
 magic_fx.set_volume(0.75)
 
 # Load Fighter Spritesheets
-warrior_sheet = pygame.image.load("assets/images/warrior.png").convert_alpha()
-wizard_sheet = pygame.image.load("assets/images/wizard.png").convert_alpha()
+warrior_sheet = pygame.image.load(resource_path("assets/images/warrior.png")).convert_alpha()
+wizard_sheet = pygame.image.load(resource_path("assets/images/wizard.png")).convert_alpha()
 
 # Define Animation Steps
 WARRIOR_ANIMATION_STEPS = [10, 8, 1, 7, 7, 3, 7]
