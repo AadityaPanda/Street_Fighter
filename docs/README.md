@@ -76,7 +76,7 @@ Follow these steps to install and run the game:
 
 You can download the latest release of **Shadow Fight** from the following link:
 
-[Download Latest Release](https://github.com/AadityaPanda/Shadow-Fight/releases/latest)
+[Download Latest Release](https://github.com/AadityaPanda/Street_Fighter/releases)
 
 ## License
 
