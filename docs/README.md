@@ -1,8 +1,8 @@
-# Shadow Fight
+# Street Fighter 
 ![download](https://github.com/user-attachments/assets/1395caef-363b-4485-8c0a-8d738f3cd379)
 
 
-**Shadow Fight** is an engaging two-player fighting game built with Python and Pygame. This project features exciting gameplay mechanics, unique characters, and dynamic animations, making it a perfect choice for retro game enthusiasts and developers interested in Python-based game development.
+**Street Fighter** is an engaging two-player fighting game built with Python and Pygame. This project features exciting gameplay mechanics, unique characters, and dynamic animations, making it a perfect choice for retro game enthusiasts and developers interested in Python-based game development.
 
 ## Features
 - **Two Distinct Fighters**:
@@ -45,8 +45,8 @@ Follow these steps to install and run the game:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/AadityaPanda/Shadow-Fight.git
-   cd Shadow-Fight
+   git clone https://github.com/AadityaPanda/Street_Fighter.git
+   cd Streer_Fighter
    ```
 
 2. **Install Dependencies**:
@@ -76,7 +76,7 @@ Follow these steps to install and run the game:
 
 ## Downloads
 
-You can download the latest release of **Shadow Fight** from the following link:
+You can download the latest release of **Street Fighter** from the following link:
 
 [Download Latest Release](https://github.com/AadityaPanda/Street_Fighter/releases)
 
