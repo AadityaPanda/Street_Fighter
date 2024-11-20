@@ -8,17 +8,22 @@
 - **Two Distinct Fighters**:
   - **Warrior**: A melee combatant with powerful sword attacks.
   - **Wizard**: A magic wielder with spell-based attacks.
+  
 - **Gameplay Mechanics**:
   - Health bars for each fighter.
   - Smooth animations for idle, run, jump, attack, hit, and death actions.
   - Scoring system to track player victories.
+ 
 - **Dynamic Background**:
   - Blurred background effects during the main menu for a cinematic feel.
+
 - **Sound Effects and Music**:
   - Immersive soundtracks and attack effects.
+
 - **Responsive UI**:
   - Main menu with start, score, and exit options.
   - Victory screen for the winning fighter.
+
 - **Custom Controls** for two players.
 
 ## 📋 Table of Contents
