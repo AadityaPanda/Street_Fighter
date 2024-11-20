@@ -2,8 +2,6 @@
 
 **Shadow Fight** is an engaging two-player fighting game built with Python and Pygame. This project features exciting gameplay mechanics, unique characters, and dynamic animations, making it a perfect choice for retro game enthusiasts and developers interested in Python-based game development.
 
-
-
 ## Features
 - **Two Distinct Fighters**:
   - **Warrior**: A melee combatant with powerful sword attacks.
@@ -21,21 +19,16 @@
   - Victory screen for the winning fighter.
 - **Custom Controls** for two players.
 
-
-
 ## 📋 Table of Contents
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Gameplay Instructions](#gameplay-instructions)
-- [Screenshots](#screenshots)
-- [Demo](#demo)
+- [Downloads](#downloads)
 - [License](#license)
 - [Credits](#credits)
 - [Contributing](#contributing)
 - [Contact](#contact)
-
-
 
 ## Requirements
 - Python 3.7 or higher
@@ -43,8 +36,6 @@
   - `pygame`
   - `numpy`
   - `opencv-python`
-
-
 
 ## Installation
 
@@ -66,8 +57,6 @@ Follow these steps to install and run the game:
    python src/main.py
    ```
 
-
-
 ## Gameplay Instructions
 
 ### Player Controls:
@@ -83,26 +72,15 @@ Follow these steps to install and run the game:
 
 **Objective**: Reduce your opponent's health to zero to win the round. Victory is celebrated with a dynamic win screen!
 
+## Downloads
 
+You can download the latest release of **Shadow Fight** from the following link:
 
-## Screenshots
-![Screenshot (2)](https://github.com/user-attachments/assets/7562ab48-b357-46c6-8629-6a9af19f321e)
-![Screenshot (3)](https://github.com/user-attachments/assets/36889906-8cec-4320-a4d0-b56390ce6da2)
-![Screenshot (4)](https://github.com/user-attachments/assets/84f33ec5-b251-471f-a094-b5ab94533ab5)
-
-
-## Demo
-
-
-https://github.com/user-attachments/assets/2d1ca950-ebee-4440-87f0-c0eeae48d9c0
-
-
+[Download Latest Release](https://github.com/AadityaPanda/Shadow-Fight/releases/latest)
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it in your projects.
-
-
 
 ## Credits
 
@@ -111,8 +89,6 @@ This project is licensed under the [MIT License](LICENSE). Feel free to use, mod
   - Background music and sound effects: [Free Music Archive](https://freemusicarchive.org/)
   - Fonts: [Turok Font](https://www.fontspace.com/turok-font)
   - Sprites: Custom-designed and modified from open-source assets.
-
-
 
 ## Contributing
 
@@ -133,8 +109,6 @@ Contributions are welcome! Here's how you can help:
 5. Open a pull request.
 
 Check the [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
-
 
 ## Contact
 
