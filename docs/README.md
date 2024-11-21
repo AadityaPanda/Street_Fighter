@@ -84,6 +84,7 @@ Follow these steps to install and run the game:
 You can download the latest release of **Street Fighter** from the following link:
 
 [Download Latest Release](https://github.com/AadityaPanda/Street_Fighter/releases)
+![GitHub Downloads (all assets, latest release)](https://img.shields.io/github/downloads/AadityaPanda/Street_Fighter/latest/total?style=for-the-badge)
 
 ## License
 
