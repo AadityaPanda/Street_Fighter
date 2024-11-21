@@ -83,7 +83,7 @@ Follow these steps to install and run the game:
 
 You can download the latest release of **Street Fighter** from the following link:
 
-[![Version](https://img.shields.io/github/v/release/AadityaPanda/Street_Fighter?color=%230567ff&label=Latest%20Release&style=for-the-badge)](https://github.com/AadityaPanda/Street_Fighter/releases/latest) <a href="https://github.com/AadityaPanda/Street_Fighter/releases/download/v1.1/Game.zip"><img  alt="Download" title="Download" src="https://custom-icon-badges.demolab.com/badge/-Download-F25278?style=for-the-badge&logo=download&logoColor=white"/></a>
+[![Version](https://img.shields.io/github/v/release/AadityaPanda/Street_Fighter?color=%230567ff&label=Latest%20Release&style=for-the-badge)](https://github.com/AadityaPanda/Street_Fighter/releases/latest) <a href="https://github.com/AadityaPanda/Street_Fighter/releases/download/v1.1/Game.zip"><img  alt="Download" title="Download" src="https://custom-icon-badges.demolab.com/badge/-Download-0B6623?style=for-the-badge&logo=download&logoColor=white"/></a>
 
 ## License
 
