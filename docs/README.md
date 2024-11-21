@@ -85,6 +85,8 @@ You can download the latest release of **Street Fighter** from the following lin
 
 <a href="https://github.com/AadityaPanda/Street_Fighter/releases/download/v1.1/Game.zip"><img  alt="Download" title="Download" src="https://custom-icon-badges.demolab.com/badge/-Download-F25278?style=for-the-badge&logo=download&logoColor=white"/></a>
 
+[![Version](https://img.shields.io/github/v/release/AadityaPanda/Street_Fighter?color=%230567ff&label=Latest%20Release&style=for-the-badge)](https://github.com/AadityaPanda/Street_Fighter/releases/latest)
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute it in your projects.
