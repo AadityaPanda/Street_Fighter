@@ -56,7 +56,7 @@ Follow these steps to install and run the game:
 
 2. **Install Dependencies**:
    ```bash
-   pip install -r requirements.txt
+   pip install -r docs/requirements.txt
    ```
 
 3. **Run the Game**:
