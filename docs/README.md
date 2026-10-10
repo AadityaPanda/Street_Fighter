@@ -1,15 +1,15 @@
 <div align="center">
 
 # 🥊 Street Fighter 
-### *The Ultimate Python Fighting Experience*
+### *Warrior vs Wizard: you against the computer*
 
 ![Street Fighter Banner](https://github.com/user-attachments/assets/1395caef-363b-4485-8c0a-8d738f3cd379)
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=24&duration=3000&pause=1000&color=FF6B35&center=true&vCenter=true&width=500&lines=Two+Player+Fighting+Game;Built+with+Python+%26+Pygame;Choose+Your+Fighter!;Warrior+vs+Wizard" alt="Typing Animation" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=24&duration=3000&pause=1000&color=FF6B35&center=true&vCenter=true&width=500&lines=Player+vs+Computer;Built+with+Python+%26+Pygame;Warrior+vs+Wizard;Can+you+beat+the+AI%3F" alt="Typing Animation" />
 
 [![Python](https://img.shields.io/badge/Python-3.7+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![Pygame](https://img.shields.io/badge/Pygame-2.0+-00A86B?style=for-the-badge&logo=pygame&logoColor=white)](https://pygame.org)
-[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=open-source-initiative&logoColor=white)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge&logo=open-source-initiative&logoColor=white)](../LICENSE)
 [![Stars](https://img.shields.io/github/stars/AadityaPanda/Street_Fighter?style=for-the-badge&logo=github&color=FFD700)](https://github.com/AadityaPanda/Street_Fighter/stargazers)
 
 </div>
@@ -18,77 +18,9 @@
 
 ## 🎮 About The Game
 
-**Street Fighter** is an electrifying two-player fighting game that brings classic arcade action to your desktop! Built with Python and Pygame, this project showcases advanced game development techniques with smooth animations, dynamic combat systems, and immersive audio-visual effects.
+**Street Fighter** is a single-player 2D fighting game built with Python and Pygame. You control the **Warrior** and fight a computer-controlled **Wizard** in fast, one-on-one rounds. Knock the Wizard's health to zero to win the round and add a point to your score.
 
-> *"Enter the arena, choose your destiny, and prove your fighting prowess!"* ⚔️
-
----
-
-## ✨ Game Features
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-### 🗡️ **The Warrior**
-![Warrior](https://img.shields.io/badge/Melee-Fighter-red?style=for-the-badge&logo=sword&logoColor=white)
-
-**Master of Blades**
-- ⚔️ Devastating sword attacks
-- 🛡️ Heavy armor protection  
-- 💪 High damage output
-- 🏃‍♂️ Agile combat moves
-
-</td>
-<td align="center" width="50%">
-
-### 🧙‍♂️ **The Wizard**
-![Wizard](https://img.shields.io/badge/Magic-Caster-blue?style=for-the-badge&logo=magic&logoColor=white)
-
-**Arcane Spellcaster**
-- ✨ Powerful spell attacks
-- 🔮 Magical projectiles
-- 🌟 Elemental damage
-- 🎭 Mystical abilities
-
-</td>
-</tr>
-</table>
-
-### 🎯 **Core Gameplay Features**
-
-<div align="center">
-
-| Feature | Description | Status |
-|---------|-------------|--------|
-| 💚 **Health System** | Dynamic health bars with real-time updates | ✅ Active |
-| 🎬 **Smooth Animations** | Fluid character movements and transitions | ✅ Active |
-| 🏆 **Scoring System** | Track victories and tournament progress | ✅ Active |
-| 🎵 **Audio Experience** | Immersive soundtracks and combat effects | ✅ Active |
-| 🖼️ **Dynamic Backgrounds** | Cinematic blur effects and visual polish | ✅ Active |
-| 🎮 **Responsive Controls** | Intuitive two-player control scheme | ✅ Active |
-
-</div>
-
----
-
-## 🎨 Visual Showcase
-
-<div align="center">
-
-### 🌟 **Game Highlights**
-
-```ascii
-    ⚔️  COMBAT SYSTEM  ⚔️
-    ╔═══════════════════╗
-    ║  • Melee Attacks  ║
-    ║  • Magic Spells   ║
-    ║  • Combo System   ║
-    ║  • Victory Moves  ║
-    ╚═══════════════════╝
-```
-
-</div>
+> *"Enter the arena and prove you can outfight the machine!"* ⚔️
 
 ---
 
@@ -101,7 +33,7 @@
 | 🎮 | [Features](#-game-features) |
 | ⚙️ | [Requirements](#-requirements) |
 | 🚀 | [Installation](#-installation) |
-| 🎯 | [Gameplay](#-gameplay-instructions) |
+| 🎯 | [How to Play](#-how-to-play) |
 | 📦 | [Downloads](#-downloads) |
 | 📄 | [License](#-license) |
 | 🙏 | [Credits](#-credits) |
@@ -112,39 +44,68 @@
 
 ---
 
-## ⚙️ Requirements
+## ✨ Game Features
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+### 🗡️ **The Warrior (You)**
+![Player](https://img.shields.io/badge/Player-You-blue?style=for-the-badge&logo=user&logoColor=white)
+
+- ⚔️ Two sword attacks
+- 🏃‍♂️ Run and jump around the arena
+- 🎯 Read the AI and punish its mistakes
+
+</td>
+<td align="center" width="50%">
+
+### 🧙‍♂️ **The Wizard (Computer)**
+![Computer](https://img.shields.io/badge/Player-Computer-orange?style=for-the-badge&logo=probot&logoColor=white)
+
+- ✨ Two magic attacks
+- 🧠 Chases you down and keeps its spacing
+- 🛡️ Counter-attacks when you jump or swing
+- 🏃 Backs off and dodges when its health is low
+
+</td>
+</tr>
+</table>
+
+### 🎯 **Core Gameplay Features**
 
 <div align="center">
 
-### 🛠️ **System Requirements**
+| Feature | Description |
+|---------|-------------|
+| 🤖 **Computer Opponent** | AI-controlled Wizard that approaches, jumps, counters and retreats |
+| 🖱️ **Main Menu** | Start Game, Controls, Scores and Exit, all clickable |
+| 📖 **In-Game Controls Guide** | Keys, rules and tips available from the menu |
+| ⏱️ **Round Countdown** | 3, 2, 1, FIGHT! before every round |
+| 💚 **Health Bars** | Live health for you and the computer; each hit deals 10 damage |
+| 🏆 **Scoreboard** | Rounds won by you and by the computer this session |
+| 🎬 **Sprite Animations** | Idle, run, jump, two attacks, hit and death for both fighters |
+| 🎵 **Music & Sound Effects** | Background music plus sword and magic sounds |
+| 🖼️ **Blurred Menu Backgrounds** | OpenCV blur behind the menus |
 
 </div>
 
-| Component | Minimum Requirement |
-|-----------|-------------------|
-| 🐍 **Python** | Version 3.7 or higher |
-| 💾 **RAM** | 4GB recommended |
-| 💿 **Storage** | 100MB free space |
-| 🖥️ **Display** | 1024x768 resolution |
+---
 
-### 📚 **Required Libraries**
+## ⚙️ Requirements
+
+- 🐍 **Python** 3.7 or higher
+- 📚 **Libraries**: listed in [`requirements.txt`](requirements.txt)
 
 ```python
-# Core Dependencies
-pygame>=2.0.0      # Game engine
-numpy>=1.19.0      # Mathematical operations  
-opencv-python>=4.5.0  # Image processing
+pygame         # Game engine
+numpy          # Image arrays
+opencv-python  # Background blur
 ```
 
 ---
 
 ## 🚀 Installation
-
-<div align="center">
-
-### 🎯 **Quick Start Guide**
-
-</div>
 
 **Step 1: Clone the Repository**
 ```bash
@@ -162,28 +123,15 @@ pip install -r docs/requirements.txt
 python src/main.py
 ```
 
-<div align="center">
-
-🎉 **Ready to Fight!** 🎉
-
-</div>
+> 🖥️ The game opens borderless at your screen's full resolution. To quit, click **MAIN MENU** during a fight, then **EXIT**.
 
 ---
 
-## 🎯 Gameplay Instructions
+## 🎯 How to Play
 
 <div align="center">
 
-### 🎮 **Master the Controls**
-
-</div>
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-### 👤 **Player 1 (Warrior)**
-![Player 1](https://img.shields.io/badge/Player-1-red?style=for-the-badge&logo=user&logoColor=white)
+### 🎮 **Controls (Warrior)**
 
 | Action | Key |
 |--------|-----|
@@ -193,36 +141,24 @@ python src/main.py
 | ⚔️ Attack 1 | `R` |
 | 🗡️ Attack 2 | `T` |
 
-</td>
-<td align="center" width="50%">
-
-### 👤 **Player 2 (Wizard)**
-![Player 2](https://img.shields.io/badge/Player-2-blue?style=for-the-badge&logo=user&logoColor=white)
-
-| Action | Key |
-|--------|-----|
-| ⬅️ Move Left | `←` |
-| ➡️ Move Right | `→` |
-| ⬆️ Jump | `↑` |
-| ✨ Spell 1 | `M` |
-| 🔮 Spell 2 | `N` |
-
-</td>
-</tr>
-</table>
-
-<div align="center">
-
-### 🏆 **Victory Conditions**
-
-```diff
-+ Reduce opponent's health to ZERO
-+ Unleash devastating combo attacks
-+ Master timing and positioning
-+ Claim victory in the arena!
-```
+Menus use the **mouse**. During a fight, click **MAIN MENU** (top centre) to leave the round.
 
 </div>
+
+### 🏆 **Rules**
+
+```diff
++ You are the Warrior on the left, the computer is the Wizard on the right
++ Both fighters start with 100 health; every hit deals 10 damage
++ Bring the Wizard's health to zero to win the round
++ Each round won adds a point to your score (see SCORES in the menu)
+```
+
+### 💡 **Tips**
+
+- Jump to dodge incoming attacks.
+- The Wizard punishes careless jumps and swings, so pick your moment.
+- When its health gets low it retreats, so stay on it.
 
 ---
 
@@ -230,15 +166,13 @@ python src/main.py
 
 <div align="center">
 
-### 🎯 **Get the Latest Release**
-
 [![Latest Release](https://img.shields.io/github/v/release/AadityaPanda/Street_Fighter?color=%230567ff&label=Latest%20Release&style=for-the-badge&logo=github)](https://github.com/AadityaPanda/Street_Fighter/releases/latest)
-
-[![Download Game](https://custom-icon-badges.demolab.com/badge/-Download%20Game-0B6623?style=for-the-badge&logo=download&logoColor=white)](https://github.com/AadityaPanda/Street_Fighter/releases/download/v1.1/Game.zip)
 
 [![Download Source](https://img.shields.io/badge/Download-Source%20Code-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AadityaPanda/Street_Fighter/archive/refs/heads/main.zip)
 
 </div>
+
+> ℹ️ The prebuilt v1.1 release is the older two-player version. Run from source to play against the computer.
 
 ---
 
@@ -258,17 +192,10 @@ This project is licensed under the **MIT License**
 
 ## 🙏 Credits
 
-<div align="center">
-
-### 👨‍💻 **Development Team**
-
-</div>
-
 | Role | Contributor |
 |------|-------------|
 | 🎮 **Lead Developer** | [Aaditya Panda](https://github.com/AadityaPanda) |
-| 🎨 **Game Design** | Aaditya Panda |
-| 🔧 **Technical Lead** | Aaditya Panda |
+| 🤖 **Computer Opponent (AI)** | [Prakashtiwari7415](https://github.com/Prakashtiwari7415) |
 
 ### 🎨 **Assets & Resources**
 
@@ -283,43 +210,19 @@ This project is licensed under the **MIT License**
 
 ## 🤝 Contributing
 
-<div align="center">
+Contributions are welcome! Fork the repository on GitHub, then:
 
-### 🌟 **Join the Development!**
+```bash
+git checkout -b feature/AmazingFeature
+git commit -m "Add AmazingFeature"
+git push origin feature/AmazingFeature
+```
 
-We welcome contributions from the community!
-
-</div>
-
-**🚀 Quick Contribution Guide:**
-
-1. **Fork** the repository
-   ```bash
-   git fork https://github.com/AadityaPanda/Street_Fighter.git
-   ```
-
-2. **Create** a feature branch
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-
-3. **Commit** your changes
-   ```bash
-   git commit -m "Add AmazingFeature"
-   ```
-
-4. **Push** to the branch
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-
-5. **Open** a Pull Request
+and open a Pull Request. See [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
 <div align="center">
 
 [![Contributors](https://img.shields.io/github/contributors/AadityaPanda/Street_Fighter?style=for-the-badge&logo=github)](https://github.com/AadityaPanda/Street_Fighter/graphs/contributors)
-
-*Check [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines*
 
 </div>
 
@@ -328,8 +231,6 @@ We welcome contributions from the community!
 ## 📧 Contact
 
 <div align="center">
-
-### 🌐 **Let's Connect!**
 
 [![Email](https://img.shields.io/badge/Email-aadityapanda23@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:aadityapanda23@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-AadityaPanda-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AadityaPanda)

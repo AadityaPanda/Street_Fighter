@@ -1,6 +1,6 @@
-# Contributing to Shadow Fight
+# Contributing to Street Fighter
 
-Thank you for considering contributing to **Shadow Fight**! Your support and ideas are invaluable in improving this project. Whether you're fixing bugs, adding features, or suggesting improvements, we welcome all contributions.
+Thank you for considering contributing to **Street Fighter**! Your support and ideas are invaluable in improving this project. Whether you're fixing bugs, adding features, or suggesting improvements, we welcome all contributions.
 
 ---
 
@@ -12,8 +12,8 @@ Thank you for considering contributing to **Shadow Fight**! Your support and ide
 ### 2. Clone Your Fork
 - Clone your forked repository to your local machine:
   ```bash
-  git clone https://github.com/AadityaPanda/Shadow-Fight.git
-  cd Shadow-Fight
+  git clone https://github.com/AadityaPanda/Street_Fighter.git
+  cd Street_Fighter
   ```
 
 ### 3. Create a Branch
@@ -57,11 +57,11 @@ By contributing, you agree to adhere to the project's [Code of Conduct](CODE_OF_
 ## 🛡️ Guidelines for Contributions
 
 - **Bug Reports**:
-  - Use the [Issues](https://github.com/AadityaPanda/Shadow-Fight/issues) tab to report bugs.
+  - Use the [Issues](https://github.com/AadityaPanda/Street_Fighter/issues) tab to report bugs.
   - Provide a clear description of the bug, including steps to reproduce it.
 
 - **Feature Requests**:
-  - Use the [Issues](https://github.com/AadityaPanda/Shadow-Fight/issues) tab to suggest new features.
+  - Use the [Issues](https://github.com/AadityaPanda/Street_Fighter/issues) tab to suggest new features.
   - Explain the motivation behind the feature and how it will benefit the project.
 
 - **Coding Style**:
@@ -71,13 +71,13 @@ By contributing, you agree to adhere to the project's [Code of Conduct](CODE_OF_
 ---
 
 ## 🔄 Issues and Feedback
-- Check the [Issues](https://github.com/AadityaPanda/Shadow-Fight/issues) page for existing reports or feature requests before submitting a new one.
+- Check the [Issues](https://github.com/AadityaPanda/Street_Fighter/issues) page for existing reports or feature requests before submitting a new one.
 - Feel free to provide feedback or suggestions in the **Discussions** tab.
 
 ---
 
 ## 🙌 Acknowledgments
-We appreciate your efforts in making **Shadow Fight** better. Thank you for contributing and helping this project grow!
+We appreciate your efforts in making **Street Fighter** better. Thank you for contributing and helping this project grow!
 
 ---
 
