@@ -135,7 +135,7 @@ def victory_screen(winner_img):
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
 
 
 def draw_gradient_text(text, font, x, y, colors):
@@ -189,7 +189,7 @@ def main_menu():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if start_button.collidepoint(event.pos):
                     return "START"
@@ -199,7 +199,7 @@ def main_menu():
                     return "SCORES"
                 if exit_button.collidepoint(event.pos):
                     pygame.quit()
-                    exit()
+                    sys.exit()
 
         pygame.display.update()
         clock.tick(FPS)
@@ -232,7 +232,7 @@ def scores_screen():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if return_button.collidepoint(event.pos):
                     return
@@ -284,7 +284,7 @@ def controls_screen():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if return_button.collidepoint(event.pos):
                     return
@@ -373,7 +373,7 @@ def game_loop():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
-                exit()
+                sys.exit()
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if exit_button.collidepoint(event.pos):
                     return
