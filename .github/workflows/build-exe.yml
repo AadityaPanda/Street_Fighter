@@ -1,0 +1,36 @@
+name: Build Windows exe
+
+# Builds Street_Fighter.exe and attaches it to the release.
+# Runs on every published release; run it by hand to (re)build for an existing tag.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to build and attach the exe to
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.tag }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r docs/requirements.txt pyinstaller
+
+      - run: pyinstaller --onefile --windowed --name Street_Fighter --add-data "assets;assets" src/main.py
+
+      - run: gh release upload "$env:TAG" dist/Street_Fighter.exe --clobber --repo "${{ github.repository }}"
